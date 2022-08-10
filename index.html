@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Code Quiz</title>
+    </head>
+
+    <body>
+        <header>
+            <h3 id="high-scores">High Scores</h3>
+            <h3 id="timer">Time: </h3>
+        </header>
+
+        <main>
+            <div class="page">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer all the questions in the alotted time.  Answering a question incorrectly will result in ten seconds being removed from the timer.</p>
+                <button id="start-btn">Start Quiz</button>
+            </div>
+
+            <div class="page hidden">
+                <h1>Commenly used data types do not include:</h1>
+                <div class="questions">
+                    <button data-correct="false">1. Strings</button>
+                    <button data-correct="false">2. Booleans</button>
+                    <button data-correct="true">3. Alerts</button>
+                    <button data-correct="false">4. Numbers</button>
+                </div>
+            </div>
+
+            <div class="page hidden">
+                <h1>The condition of an if/else statement is enclosed in:</h1>
+                <div class="questions">
+                    <button data-correct="false">1. Quotes</button>
+                    <button data-correct="false">2. Curley Brackets</button>
+                    <button data-correct="true">3. Parenthesis</button>
+                    <button data-correct="false">4. Square Brackets</button>
+                </div>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
