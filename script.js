@@ -3,8 +3,15 @@ var page = document.querySelectorAll(".page");
 var questions = document.querySelectorAll(".questions");
 
 var timeLeft = 100;
-var pageNumber = 1;
-var questionNumber = 0;
+var pageNumber = 0;
+
+function renderPage() {
+    pageNumber++;
+    page[pageNumber-1].style.display = "none";
+    page[pageNumber].style.display = "flex";
+
+    console.log("page number is " + pageNumber);
+};
 
 function answerPicked(event) {
     var userChoice = event.target;
@@ -15,20 +22,17 @@ function answerPicked(event) {
             timeLeft -= 10;
             console.log("incorrect");
         }
-
-        pageNumber++;
-        page[pageNumber-1].style.display = "none";
-        page[pageNumber].style.display = "flex";
-
-        questionNumber++;
-    }
+        renderPage();
+    }  
 }
 
 function runQuiz() {
-    page[0].style.display = "none";
-    page[1].style.display = "flex";
+    renderPage();
+    for (var i = 0; i < questions.length; i++){
+        questions[i].addEventListener("click", answerPicked);
+    }
 }
 
 startBtn.addEventListener("click", runQuiz);
 
-questions[questionNumber].addEventListener("click", answerPicked);
+
