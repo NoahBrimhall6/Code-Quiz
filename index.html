@@ -8,8 +8,8 @@
 
     <body>
         <header>
-            <h3 id="high-scores">High Scores</h3>
-            <h3 id="timer">Time: </h3>
+            <h3 id="view-high-scores">View High Scores</h3>
+            <h3>Time: <span id="timer">100</span></h3>
         </header>
 
         <main>
@@ -67,6 +67,15 @@
                     <button data-correct="false">3. For loops</button>
                     <button data-correct="true">4. Console.log</button>
                 </div>
+            </div>
+
+            <div class="page hidden">
+                <h1>All Done!</h1>
+                <h2>Your Final High Score Is: <span id="score">0</span></h2>
+                <form>
+                    <lable for="input">Input your initials: </lable>
+                    <input type="text" name="input" id="input" />
+                </form>
             </div>
         </main>
         <script src="./script.js"></script>
