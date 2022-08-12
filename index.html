@@ -7,18 +7,20 @@
     </head>
 
     <body>
+        <!-- header -->
         <header>
             <h3 id="view-high-scores">View High Scores</h3>
             <h3>Time: <span id="timer">100</span></h3>
         </header>
 
         <main>
+            <!-- start page -->
             <div class="page">
                 <h1>Coding Quiz Challenge</h1>
                 <p>Try to answer all the questions in the alotted time.  Answering a question incorrectly will result in ten seconds being removed from the timer.</p>
                 <button id="start-btn">Start Quiz</button>
             </div>
-
+            <!-- question 1 -->
             <div class="page hidden">
                 <h1>Commenly used data types do not include:</h1>
                 <div class="questions">
@@ -28,7 +30,7 @@
                     <button data-correct="false">4. Numbers</button>
                 </div>
             </div>
-
+            <!-- question 2 -->
             <div class="page hidden">
                 <h1>The condition of an if/else statement is enclosed in:</h1>
                 <div class="questions">
@@ -38,7 +40,7 @@
                     <button data-correct="false">4. Square Brackets</button>
                 </div>
             </div>
-
+            <!-- question 3 -->
             <div class="page hidden">
                 <h1>Arrays in Javascript can be used to hold:</h1>
                 <div class="questions">
@@ -48,7 +50,7 @@
                     <button data-correct="true">4. All of the above</button>
                 </div>
             </div>
-
+            <!-- question 4 -->
             <div class="page hidden">
                 <h1>string values must be enclosed within ____ when being assigned to variables:</h1>
                 <div class="questions">
@@ -58,7 +60,7 @@
                     <button data-correct="false">4. Square Brackets</button>
                 </div>
             </div>
-
+            <!-- question 5 -->
             <div class="page hidden">
                 <h1>A very useful tool used during the development and debugging of Javascript is:</h1>
                 <div class="questions">
@@ -68,7 +70,7 @@
                     <button data-correct="true">4. Console.log</button>
                 </div>
             </div>
-
+            <!-- final page -->
             <div class="page hidden">
                 <h1>All Done!</h1>
                 <h2>Your Final High Score Is: <span id="score">0</span></h2>
@@ -76,6 +78,14 @@
                     <lable for="input">Input your initials: </lable>
                     <input type="text" name="input" id="input" />
                 </form>
+            </div>
+            <!-- high score page -->
+            <div class="page hidden">
+                <h1>High Scores</h1>
+                <ul id="high-score-list">
+                </ul>
+                <button id="back">Go Back</button>
+                <button id="reset">Reset High Scores</button>
             </div>
         </main>
         <script src="./script.js"></script>

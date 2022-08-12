@@ -46,3 +46,11 @@ button{
 button:hover{
     background-color: darkviolet;
 }
+
+#view-high-scores {
+    color: blue;
+}
+
+#view-high-scores:hover {
+    color: dodgerblue;
+}
