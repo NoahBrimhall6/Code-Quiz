@@ -54,3 +54,18 @@ button:hover{
 #view-high-scores:hover {
     color: dodgerblue;
 }
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+li {
+    list-style: none;
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1 solid darkgreen;
+    border-radius: 3px;
+    background-color: lightgreen;
+}

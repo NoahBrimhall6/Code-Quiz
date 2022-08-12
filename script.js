@@ -9,6 +9,7 @@ var resetBtn = document.querySelector("#reset");
 var highScoreList = document.querySelector("#high-score-list");
 var highScoresBtn = document.querySelector("#view-high-scores")
 var header = document.querySelector("header");
+var timer = document.querySelector("#timer");
 
 var timeLeft = 100;
 var pageNumber = 0;
@@ -44,7 +45,6 @@ function answerPicked(event) {
 function submit(event) {
     event.preventDefault();
     inputText = input.value.trim();
-    if (inputText === "") {return;}
     highScores.push(inputText + " " + timeLeft);
     input.value = "";
     localStorage.setItem("highScores", JSON.stringify(highScores));
@@ -85,7 +85,6 @@ function goBack() {
     page[page.length-1].style.display = "none";
     if (pageNumber === page.length-2) {
         pageNumber = 0;
-        timeLeft = 100;
         startBtn.addEventListener("click", runQuiz);
     } 
     page[pageNumber].style.display = "flex";
@@ -99,6 +98,22 @@ function runQuiz() {
         questions[i].addEventListener("click", answerPicked);
     }
     form.addEventListener("submit", submit);
+    timeLeft = 100;
+    startTimer();
+}
+
+//timer function
+function startTimer() {
+    var timerInterval = setInterval(function() {
+        timeLeft--;
+        timer.textContent = timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+        };
+        if(pageNumber === page.length-2) {
+            clearInterval(timerInterval);
+        }
+    }, 1000);
 }
 
 startBtn.addEventListener("click", runQuiz);
